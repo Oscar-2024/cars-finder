@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
 {
-    
     public $timestamps = false;
 
     protected $fillable = [
@@ -23,5 +22,4 @@ class Brand extends Model
     const MERCEDES_BENZ = 8;
     const BMW = 9;
     const AUDI = 10;
-
 }

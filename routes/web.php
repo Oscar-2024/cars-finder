@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\CarsFinderController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', CarsFinderController::class);

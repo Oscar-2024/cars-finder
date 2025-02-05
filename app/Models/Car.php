@@ -2,11 +2,33 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Car extends Model
+class Car extends Base\Car
 {
-    /** @use HasFactory<\Database\Factories\CarFactory> */
-    use HasFactory;
+    public function engineType(): BelongsTo
+    {
+        return $this->belongsTo(EngineType::class);
+    }
+
+    public function color(): BelongsTo
+    {
+        return $this->belongsTo(Color::class);
+    }
+
+    public function model(): BelongsTo
+    {
+        return $this->belongsTo(CarModel::class, 'car_model_id');
+    }
+
+    public function dealership(): BelongsTo
+    {
+        return $this->belongsTo(Dealership::class);
+    }
+
+    public function features(): BelongsToMany
+    {
+        return $this->belongsToMany(Feature::class);
+    }
 }

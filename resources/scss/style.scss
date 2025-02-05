@@ -1,0 +1,89 @@
+@import "variables";
+
+@import "~bootstrap/scss/bootstrap";
+
+hr {
+    border: 2px dotted $secondary;
+}
+
+.cars-finder-filters {
+    background-color: $primary;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 1.4em;
+    border-right: 2px dotted $secondary;
+
+    .cars-count {
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: $secondary;
+        color: whitesmoke;
+        padding: 5px;
+    }
+
+    h3 {
+        background-color: $secondary;
+        color: $primary;
+        padding: 5px;
+    }
+
+    label {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    select {
+        padding: 5px;
+        font-size: .7em;
+        border-radius: 5px;
+    }
+
+    input[type=checkbox] {
+        margin-right: 5px;
+    }
+
+    input[type=checkbox]:checked {
+        background-color: $secondary;
+    }
+
+    .cars-finder-feature {
+        label {
+            font-size: .8em;
+            font-weight: bold;
+            padding: 5px;
+        }
+    }
+}
+.cars-finder-cars-list {
+    background-color: #f4f4f4;
+    padding: 20px;
+
+    .card {
+        background-color: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 2px dotted $secondary;
+
+        strong {
+            font-size: 1.2em;
+        }
+
+        .price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: whitesmoke;
+            background-color: $primary;
+            padding: 5px;
+        }
+    }
+
+    .cars-not-found {
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: $secondary;
+        color: whitesmoke;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}

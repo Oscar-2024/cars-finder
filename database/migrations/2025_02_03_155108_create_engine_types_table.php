@@ -13,15 +13,16 @@ return new class extends Migration
         Schema::create('engine_types', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
+            $table->string('name');  // Ej: "Gasolina"
         });
 
         EngineType::insert([
             ['name' => 'Gasolina'],
-            ['name' => 'Diesel'],
+            ['name' => 'Diésel'],
             ['name' => 'Híbrido'],
             ['name' => 'Eléctrico'],
         ]);
+
     }
 
 

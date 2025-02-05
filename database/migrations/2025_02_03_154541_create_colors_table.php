@@ -13,16 +13,16 @@ return new class extends Migration
         Schema::create('colors', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-
-            Color::insert([
-                ['name' => 'Rojo'],
-                ['name' => 'Azul'],
-                ['name' => 'Verde'],
-                ['name' => 'Amarillo'],
-                ['name' => 'Blanco'],
-            ]);
+            $table->string('name'); // Ej: "Rojo"
         });
+
+        Color::insert([
+            ['name' => 'Rojo'],
+            ['name' => 'Azul'],
+            ['name' => 'Verde'],
+            ['name' => 'Amarillo'],
+            ['name' => 'Blanco'],
+        ]);
     }
 
 
