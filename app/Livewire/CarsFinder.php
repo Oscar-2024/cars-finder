@@ -173,12 +173,12 @@ class CarsFinder extends Component
                 'engineType',
                 'features',
             ]))
-            //->through(
-            //    collect($this->filters)
-            //        ->map(fn ($value, $filter) => CarFilters::from($filter)->create(new FilterValue($value)))
-            //        ->values()
-            //        ->all()
-           // )
+            ->through(
+                collect($this->filters)
+                    ->map(fn ($value, $filter) => CarFilters::from($filter)->create(new FilterValue($value)))
+                    ->values()
+                    ->all()
+            )
             ->thenReturn()
             ->paginate(6);
     }
